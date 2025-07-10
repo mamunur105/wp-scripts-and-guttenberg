@@ -1,0 +1,17 @@
+{
+  "name": "wp-scripts-and-guttenberg",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "pot": "node scripts/wp-scripts-and-guttenberg.js",
+    "package": "node scripts/wp-scripts-and-guttenberg.js"
+  },
+  "devDependencies": {
+    "archiver": "^6.0.0",
+    "fs-extra": "^11.2.0",
+    "sass": "^1.69.0",
+    "vite": "^5.0.0",
+    "wp-pot": "^2.0.0"
+  }
+}
