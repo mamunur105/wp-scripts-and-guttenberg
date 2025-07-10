@@ -1,7 +1,7 @@
 {
   "apiVersion": 2,
   "name": "guten/add-to-cart",
-  "title": "Add to Cart (Variation)",
+  "title": "Add to Cart - Plugin",
   "category": "woocommerce",
   "icon": "cart",
   "editorScript": "file:../../dist/add-to-cart.js",
@@ -12,6 +12,7 @@
     }
   },
   "supports": {
+    "inserter": true,
     "html": false
   }
 }

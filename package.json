@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "vite build",
-    "dev": "vite build --watch",
+    "watch": "vite build --watch",
     "pot": "node scripts/wp-scripts-and-guttenberg.js",
     "package": "node scripts/wp-scripts-and-guttenberg.js"
   },
