@@ -1,18 +1,20 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "guten/add-to-cart",
+  "name": "mmb/add-to-cart",
   "title": "Add to Cart - Plugin",
-  "category": "woocommerce",
+  "category": "widgets",
   "icon": "cart",
-  "editorScript": "file:../../dist/add-to-cart.js",
-  "style": "file:../../dist/style.css",
+  "description": "Example text block one.",
+  "keywords": [
+    "custom",
+    "example"
+  ],
+  "textdomain": "my-multi-blocks",
+  "editorScript": "mmb-blocks-script",
   "attributes": {
     "productId": {
       "type": "number"
     }
-  },
-  "supports": {
-    "inserter": true,
-    "html": false
   }
 }

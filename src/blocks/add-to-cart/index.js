@@ -3,10 +3,9 @@ import { TextControl } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
 import { registerBlockType } from '@wordpress/blocks';
 import './style.scss';
-
-const BLOCK_NAME = 'guten/add-to-cart';
-
-registerBlockType(BLOCK_NAME, {
+import metadata from './block.json';
+registerBlockType( metadata.name, {
+    ...metadata,
     edit: ({ attributes, setAttributes }) => {
         const blockProps = useBlockProps();
 

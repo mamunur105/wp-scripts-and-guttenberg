@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function mmb_register_blocks() {
 	$dir = __DIR__ . '/build/blocks';
 
-	foreach ( [ 'block-one', 'block-two' ] as $block ) {
+	foreach ( [ 'add-to-cart', 'block-one', 'block-two' ] as $block ) {
 		register_block_type( "$dir/$block" );
 	}
 
