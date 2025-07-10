@@ -11,44 +11,19 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+function mmb_register_blocks() {
+	$dir = __DIR__ . '/build/blocks';
 
-function guten_add_to_cart_block_init() {
-	wp_register_script(
-		'guten-add-to-cart-editor',
-		plugins_url( 'dist/add-to-cart.js', __FILE__ ),
-		[ 'wp-blocks', 'wp-element', 'wp-i18n', 'wp-components', 'wp-block-editor' ],
-		filemtime( plugin_dir_path( __FILE__ ) . 'dist/add-to-cart.js' ),
-		true
-	);
-
-	wp_register_style(
-		'guten-add-to-cart-style',
-		plugins_url( 'dist/style.css', __FILE__ ),
-		[],
-		filemtime( plugin_dir_path( __FILE__ ) . 'dist/style.css' )
-	);
-
-	register_block_type(
-		__DIR__ . '/blocks/add-to-cart/block.json',
-		[
-			'editor_script'   => 'guten-add-to-cart-editor',
-			'style'           => 'guten-add-to-cart-style',
-			'render_callback' => 'guten_add_to_cart_render',
-		]
-	);
-}
-add_action( 'init', 'guten_add_to_cart_block_init' );
-
-function guten_add_to_cart_render( $attributes ) {
-	if ( empty( $attributes['productId'] ) ) {
-		return '<p>No product selected.</p>';
+	foreach ( [ 'block-one', 'block-two' ] as $block ) {
+		register_block_type( "$dir/$block" );
 	}
 
-	$product = wc_get_product( $attributes['productId'] );
-	$text = __('Add to cart', 'wp-scripts-and-guttenberg');
-
-
-	ob_start();
-	woocommerce_template_single_add_to_cart();
-	return ob_get_clean();
+	wp_register_script(
+		'mmb-blocks-script',
+		plugins_url( 'build/index.js', __FILE__ ),
+		[],
+		filemtime( __DIR__ . '/build/index.js' ),
+		true
+	);
 }
+add_action( 'init', 'mmb_register_blocks' );

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "mmb/block-two",
+  "title": "Block Two",
+  "category": "widgets",
+  "icon": "heart",
+  "description": "Example text block two.",
+  "keywords": ["custom", "sample"],
+  "textdomain": "my-multi-blocks",
+  "editorScript": "mmb-blocks-script",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "div"
+    }
+  }
+}
