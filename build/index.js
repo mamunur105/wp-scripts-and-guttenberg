@@ -8,7 +8,7 @@
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"mmb/add-to-cart","title":"Add to Cart - Plugin","category":"widgets","icon":"cart","description":"Example text block one.","keywords":["custom","example"],"textdomain":"my-multi-blocks","editorScript":"mmb-blocks-script","attributes":{"productId":{"type":"number"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"mmb/add-to-cart","title":"Add to Cart - Plugin","category":"widgets","icon":"cart","description":"Example text block one.","keywords":["custom","example"],"textdomain":"my-multi-blocks","editorScript":"mmb-blocks-script","attributes":{"productId":{"type":"number"}},"render":"file:./render.php"}');
 
 /***/ }),
 

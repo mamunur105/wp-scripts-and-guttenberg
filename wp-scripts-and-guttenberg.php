@@ -12,9 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 function mmb_register_blocks() {
-	$dir = __DIR__ . '/build/blocks';
-
-	foreach ( [ 'add-to-cart', 'block-one', 'block-two' ] as $block ) {
+	$dir   = __DIR__ . '/build/blocks';
+	$bloks = [
+		'add-to-cart',
+		'block-one',
+		'block-two',
+	];
+	foreach ( $bloks as $block ) {
 		register_block_type( "$dir/$block" );
 	}
 

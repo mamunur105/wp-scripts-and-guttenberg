@@ -16,5 +16,6 @@
     "productId": {
       "type": "number"
     }
-  }
+  },
+  "render": "file:./render.php"
 }
